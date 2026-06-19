@@ -1,8 +1,14 @@
 # ModReady roadmap
 
-ModReady = the standalone one-click Bannerlord dependency installer (BLSE + the
-four BUTR dependency modules). Split out of the beta-deps repo into its own
-project so it versions and ships independently.
+ModReady = the standalone Bannerlord dependency pack: the four BUTR dependency
+modules (Harmony, UIExtenderEx, ButterLib, MCM). Split out of the beta-deps repo
+into its own project so it versions and ships independently.
+
+**2026-06-19 — dropped BLSE from the bundle.** Nexus's scanner flags any archive
+containing executables, and BLSE ships three .exe. ModReady is now deps-only and
+lists BLSE as a required mod (which also keeps BLSE updatable on its own). The
+manual-install **zip** (no executables) is the Nexus artifact; the Inno `.exe`
+installer stays for local use only (Nexus flags installers regardless).
 
 ## v1.0.0 — first standalone release
 

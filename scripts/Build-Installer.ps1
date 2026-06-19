@@ -1,10 +1,15 @@
 <#
   Build-Installer.ps1 -- compile the ModReady one-click installer.
 
-  ModReady is self-contained: the bundled BLSE binaries + four BUTR dependency
-  modules live in installer\payload\ (a vendored snapshot). This script just
-  validates that payload and compiles installer\ModReady.iss with Inno Setup
-  into dist\ModReady-v<ver>.exe. It does NOT depend on the beta-deps repo.
+  ModReady is deps-only: the four BUTR dependency modules live in
+  installer\payload\Modules\ (a vendored snapshot). It does NOT bundle BLSE
+  (BLSE is a required separate mod). This script validates that payload and
+  compiles installer\ModReady.iss with Inno Setup into dist\ModReady-v<ver>.exe.
+  It does NOT depend on the beta-deps repo.
+
+  NOTE: Nexus flags Inno .exe installers regardless of contents -- the conventional
+  Nexus artifact is the manual-install ZIP (scripts\Build-Zip.ps1). This installer
+  is for users who want a local installer.
 
   To refresh the bundled modules/BLSE after a new beta-deps build, run
   scripts\sync-payload.ps1 first.
@@ -46,10 +51,10 @@ foreach ($m in $deps) {
 if (Test-Path (Join-Path $payloadModules 'BetaDeps')) {
   Fail "payload\Modules\BetaDeps must NOT be present -- ModReady ships the dependency stack only. Re-run sync-payload.ps1 (it excludes BetaDeps)."
 }
-$blseLauncher = Join-Path $Payload 'BLSE\Bannerlord.BLSE.LauncherEx.exe'
-if (-not (Test-Path $blseLauncher)) { Fail "payload\BLSE\Bannerlord.BLSE.LauncherEx.exe missing -- run sync-payload.ps1." }
-foreach ($lic in 'BLSE-LICENSE.txt','BetaDeps-THIRD-PARTY-LICENSES.txt') {
-  if (-not (Test-Path (Join-Path $Payload "LICENSES\$lic"))) { Fail "payload\LICENSES\$lic missing (required notice) -- run sync-payload.ps1." }
+# ModReady ships the dependency stack only -- BLSE is NOT bundled (it's a required
+# separate mod). Only the third-party MIT notices for the bundled DLLs are required.
+if (-not (Test-Path (Join-Path $Payload 'LICENSES\BetaDeps-THIRD-PARTY-LICENSES.txt'))) {
+  Fail "payload\LICENSES\BetaDeps-THIRD-PARTY-LICENSES.txt missing (required notice) -- run sync-payload.ps1."
 }
 
 # --- 2. find ISCC ------------------------------------------------------------

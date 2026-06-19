@@ -3,8 +3,9 @@ Nexus FILE descriptions for ModReady
 HARD LIMIT: Nexus file-description field = 255 characters MAX. Keep every entry
 below at or under 255. (Counts noted; recount if you edit.)
 
---- ZIP (Main File — manual install) — 246 chars ---
-One-click Bannerlord modding setup: installs BLSE + the 4 BUTR dependency modules (Harmony, UIExtenderEx, ButterLib, MCM). Manual install: extract into your Bannerlord folder (with bin and Modules), merge when asked, launch via BLSE. Credit BUTR.
+ModReady is DEPS-ONLY now: it bundles the four BUTR dependency modules and does
+NOT include BLSE (re-hosting BLSE's .exe gets the file flagged unsafe by Nexus).
+BLSE is a REQUIRED separate mod. Ship the ZIP (no executables) as the Main File.
 
---- EXE (installer — optional/secondary) — 249 chars ---
-One-click installer: sets up BLSE + the 4 BUTR dependency modules (Harmony, UIExtenderEx, ButterLib, MCM) so Bannerlord runs mods. Auto-detects your game folder; launch via BLSE. Unsigned, so SmartScreen may warn: More info, Run anyway. Credit BUTR.
+--- ZIP (Main File — manual install) — 250 chars ---
+Bannerlord dependency modules most mods need: Harmony, UIExtenderEx, ButterLib, MCM. Requires BLSE first (from Nexus). Extract the Modules folder into your Bannerlord folder, merge when asked, launch via BLSE. Clean-room BetaDeps builds; credit BUTR.

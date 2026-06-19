@@ -1,21 +1,22 @@
 ; ============================================================================
-;  ModReady -- Bannerlord one-click dependency installer
-;  One download that makes a fresh Mount & Blade II: Bannerlord install
-;  mod-ready: BLSE (Bannerlord Software Extender) + the four BUTR dependency
-;  modules (Harmony, UIExtenderEx, ButterLib, MCM). A new user runs this once,
-;  then just drops in the content mods they want.
+;  ModReady -- Bannerlord dependency installer (deps-only)
+;  Installs the four BUTR dependency modules (Harmony, UIExtenderEx, ButterLib,
+;  MCM) into a Mount & Blade II: Bannerlord install so it can run mods.
 ;
-;  Bundles, with permission:
-;    - BLSE -- MIT, (c) 2021-2022 BUTR. Its LICENSE ships in
-;      {app}\Modules\Bannerlord.Harmony\licenses\ and is shown on the license page.
-;    - The four BUTR dependency modules (clean-room BetaDeps builds). The
-;      BetaDeps framework module itself is NOT shipped -- this is the dependency
-;      stack only. BetaDeps.Foundation.dll still ships inside each dependency
-;      module's bin: it is their shared resolve-hook shim and they cannot load
-;      without it.
+;  Does NOT bundle BLSE. BLSE ships executables, and re-hosting them gets the
+;  download flagged by Nexus's malware scanner -- so BLSE is a REQUIRED separate
+;  mod (https://www.nexusmods.com/mountandblade2bannerlord/mods/1), which also
+;  keeps it updatable on its own. The BetaDeps framework module is likewise NOT
+;  shipped -- this is the dependency stack only. BetaDeps.Foundation.dll still
+;  ships inside each dependency module's bin: it is their shared resolve-hook
+;  shim and they cannot load without it.
+;
+;  NOTE: the conventional Nexus distribution is the manual-install ZIP
+;  (scripts\Build-Zip.ps1) -- Nexus flags Inno .exe installers regardless of
+;  contents. This .iss remains for users who want a local installer.
 ;
 ;  Build with scripts\Build-Installer.ps1 (runs ISCC against the vendored
-;  payload\). Refresh the bundled modules/BLSE with scripts\sync-payload.ps1.
+;  payload\). Refresh the modules with scripts\sync-payload.ps1.
 ;  Requires Inno Setup 6 (ISCC.exe).
 ; ============================================================================
 
@@ -24,7 +25,6 @@
   #define AppVersion "1.0.0"
 #endif
 #define AppPublisher "Maxfield Management Group"
-#define LauncherExe "Bannerlord.BLSE.LauncherEx.exe"
 
 [Setup]
 ; Keep this AppId STABLE across releases so updates replace in place.
@@ -45,30 +45,19 @@ Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
 ArchitecturesInstallIn64BitMode=x64compatible
-; BLSE's MIT license shown on the license page (satisfies the notice requirement
-; up front; the file is also copied into the install).
-LicenseFile=payload\LICENSES\BLSE-LICENSE.txt
+; Third-party MIT notices (Harmony/Cecil/MonoMod/Newtonsoft) shown on the license
+; page and copied into the install.
+LicenseFile=payload\LICENSES\BetaDeps-THIRD-PARTY-LICENSES.txt
 SetupLogging=yes
-
-[Tasks]
-Name: "desktopicon"; Description: "Create a desktop shortcut to the BLSE launcher"; GroupDescription: "Shortcuts:"
 
 [Files]
 ; The four BUTR dependency module folders (vendored snapshot in payload\Modules).
-; payload\Modules contains ONLY the four deps -- no BetaDeps module folder.
+; payload\Modules contains ONLY the four deps -- no BetaDeps module folder, no BLSE.
 Source: "payload\Modules\*"; DestDir: "{app}\Modules"; Flags: recursesubdirs createallsubdirs ignoreversion
-; BLSE binaries -> game bin (the documented BLSE install location).
-Source: "payload\BLSE\*"; DestDir: "{app}\bin\Win64_Shipping_Client"; Flags: recursesubdirs createallsubdirs ignoreversion
-; License notices (BLSE MIT, third-party MIT for Harmony/Cecil/MonoMod/Newtonsoft).
+; License notices (third-party MIT for Harmony/Cecil/MonoMod/Newtonsoft).
 ; Installed under the Harmony dependency module (always present); do NOT target a
 ; BetaDeps folder -- this installer ships none and must not recreate one.
 Source: "payload\LICENSES\*"; DestDir: "{app}\Modules\Bannerlord.Harmony\licenses"; Flags: recursesubdirs createallsubdirs ignoreversion
-
-[Icons]
-Name: "{autodesktop}\Bannerlord (BLSE)"; Filename: "{app}\bin\Win64_Shipping_Client\{#LauncherExe}"; WorkingDir: "{app}\bin\Win64_Shipping_Client"; Tasks: desktopicon
-
-[Run]
-Filename: "{app}\bin\Win64_Shipping_Client\{#LauncherExe}"; Description: "Launch the BLSE launcher now"; Flags: nowait postinstall skipifsilent
 
 [UninstallRun]
 ; Remove the persistent User-scope CREST_SHOW_STUBS env var BetaDeps may set at
