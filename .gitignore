@@ -1,0 +1,16 @@
+# Build output
+dist/
+
+# Vendored payload snapshot -- regenerated from beta-deps via scripts\sync-payload.ps1.
+# The bundled module DLLs + BLSE binaries are NOT source; the beta-deps repo is
+# their source of truth. Keep the folder structure but not the binaries.
+installer/payload/
+
+# Inno Setup compiler leftovers
+*.iss.bak
+Output/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vs/
