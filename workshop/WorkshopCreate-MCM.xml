@@ -1,0 +1,16 @@
+<Tasks>
+    <CreateItem/>
+    <UpdateItem>
+        <ModuleFolder Value="C:\dev\modready\installer\payload\Modules\Bannerlord.MBOptionScreen"/>
+        <ItemDescription Value="Part of ModReady — the Bannerlord dependency pack. MCM (Mod Configuration Menu v5), the in-game settings screen mods register their options with. Subscribe to the full ModReady collection to get all four dependencies (Harmony, UIExtenderEx, ButterLib, MCM). Requires BLSE. Clean-room BetaDeps build; credit BUTR."/>
+        <Tags>
+            <Tag Value="Utility" />
+            <Tag Value="Native" />
+            <Tag Value="Singleplayer" />
+            <Tag Value="Multiplayer" />
+            <Tag Value="v1.4.6" />
+        </Tags>
+        <Image Value="C:\dev\modready\workshop\ModReady-Image.png"/>
+        <Visibility Value="Public"/>
+    </UpdateItem>
+</Tasks>

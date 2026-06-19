@@ -1,0 +1,15 @@
+<Tasks>
+    <CreateItem/>
+    <UpdateItem>
+        <ModuleFolder Value="C:\dev\modready\installer\payload\Modules\Bannerlord.Harmony"/>
+        <ItemDescription Value="Part of ModReady — the Bannerlord dependency pack. Harmony 2 runtime patcher, required by almost every mod that patches game methods. Subscribe to the full ModReady collection to get all four dependencies (Harmony, UIExtenderEx, ButterLib, MCM). Requires BLSE. Clean-room BetaDeps build; credit BUTR."/>
+        <Tags>
+            <Tag Value="Utility" />
+            <Tag Value="Native" />
+            <Tag Value="Singleplayer" />
+            <Tag Value="v1.4.6" />
+        </Tags>
+        <Image Value="C:\dev\modready\workshop\ModReady-Image.png"/>
+        <Visibility Value="Public"/>
+    </UpdateItem>
+</Tasks>

@@ -1,0 +1,17 @@
+<Tasks>
+    <GetItem>
+        <ItemId Value="PASTE_ITEM_ID_AFTER_CREATE"/>
+    </GetItem>
+    <UpdateItem>
+        <ModuleFolder Value="C:\dev\modready\installer\payload\Modules\Bannerlord.UIExtenderEx"/>
+        <ChangeNotes Value="ModReady v1.0.0" />
+        <Image Value="C:\dev\modready\workshop\ModReady-Image.png"/>
+        <Visibility Value="Public"/>
+        <Tags>
+            <Tag Value="Utility" />
+            <Tag Value="Native" />
+            <Tag Value="Singleplayer" />
+            <Tag Value="v1.4.6" />
+        </Tags>
+    </UpdateItem>
+</Tasks>
