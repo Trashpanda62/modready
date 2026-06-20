@@ -1,6 +1,6 @@
 <Tasks>
     <GetItem>
-        <ItemId Value="PASTE_ITEM_ID_AFTER_CREATE"/>
+        <ItemId Value="3747620191"/>
     </GetItem>
     <UpdateItem>
         <ModuleFolder Value="C:\dev\modready\installer\payload\Modules\Bannerlord.MBOptionScreen"/>
