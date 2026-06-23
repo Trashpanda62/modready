@@ -4,7 +4,7 @@
     </GetItem>
     <UpdateItem>
         <ModuleFolder Value="C:\dev\modready\installer\payload\Modules\Bannerlord.MBOptionScreen"/>
-        <ChangeNotes Value="ModReady v1.0.1 - fixes the MCM 'dependency conflict' startup error (dependency modules are now self-contained)." />
+        <ChangeNotes Value="ModReady v1.0.3&#10;- Fixed the Game Pass / Microsoft Store launch crash that v1.0.2 did not fully fix." />
         <Image Value="C:\dev\modready\workshop\ModReady-Image.png"/>
         <Visibility Value="Public"/>
         <Tags>

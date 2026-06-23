@@ -4,7 +4,7 @@
     </GetItem>
     <UpdateItem>
         <ModuleFolder Value="C:\dev\modready\installer\payload\Modules\Bannerlord.Harmony"/>
-        <ChangeNotes Value="ModReady v1.0.0" />
+        <ChangeNotes Value="ModReady v1.0.3&#10;- Fixed the Game Pass / Microsoft Store launch crash that v1.0.2 did not fully fix." />
         <Image Value="C:\dev\modready\workshop\ModReady-Image.png"/>
         <Visibility Value="Public"/>
         <Tags>
