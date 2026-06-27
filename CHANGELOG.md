@@ -1,11 +1,12 @@
 # ModReady changelog
 
-## v1.0.4 — 2026-06-26
+## v1.0.4 — 2026-06-27
 
-- Fixed mods built against the real BUTR MCM showing a blank settings panel — their options now render and save.
-- Settings groups with a main toggle now show an enable/disable checkbox in the group header.
-- Added a "Sub Systems" page to turn ButterLib subsystems on/off, saved across restarts.
-- Fixed UIExtenderEx mods that change 1.2+ generated UI (e.g. Party AI Controls, Clan Control) losing their additions.
+- Mods built against the real BUTR MCM now show and save their settings (were showing a blank panel).
+- The four dependency modules now pin above the native modules in the launch order, like real BUTR, instead of scattering mid-list.
+- Added a "Sub Systems" page to enable/disable ButterLib subsystems, saved across restarts.
+- Fixed UIExtenderEx mods that add controls to 1.2+ code-generated screens (e.g. Clan Control's clan-screen buttons) — their additions appear again.
+- MCM buttons now show the setting's name instead of a generic "Run".
 - MCM now uses installed language packs instead of always showing English.
 
 ## v1.0.3 — 2026-06-23
