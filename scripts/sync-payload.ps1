@@ -14,11 +14,11 @@
   Usage:
     cd C:\dev\modready
     .\scripts\sync-payload.ps1
-    .\scripts\sync-payload.ps1 -BetaDepsRepo C:\dev\beta-deps
+    .\scripts\sync-payload.ps1 -BetaDepsRepo C:\dev\modready\framework
 #>
 
 param(
-  [string] $BetaDepsRepo = 'C:\dev\beta-deps'
+  [string] $BetaDepsRepo = 'C:\dev\modready\framework'
 )
 
 $ErrorActionPreference = 'Stop'

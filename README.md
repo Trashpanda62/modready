@@ -40,7 +40,7 @@ dist\                   Output: ModReady-v<ver>.zip (git-ignored)
 ```powershell
 cd C:\dev\modready
 # (first time, or after new module builds) refresh the bundled snapshot:
-.\scripts\sync-payload.ps1            # pulls the 4 deps from C:\dev\beta-deps\dist\Modules
+.\scripts\sync-payload.ps1            # pulls the 4 deps from C:\dev\modready\framework\dist\Modules
 # build the manual-install zip (this is what goes on Nexus):
 .\scripts\Build-Zip.ps1 -Version 1.0.0
 # optional: a local Inno installer (Nexus flags .exe installers, so not for Nexus):
