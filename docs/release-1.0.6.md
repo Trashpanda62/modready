@@ -29,11 +29,19 @@ Nexus mod 11274. Bug-fix release after v1.0.5.
 ## 2. Nexus sticky post
 
 ```
-v1.0.6 is up. This one's all about MCM: your mod settings actually behave now — dropdowns show as dropdowns and keep your pick across launches, a group's master on/off toggle is back as a row, and settings-heavy mods that ship their own MCM stop getting their config wiped when you save a preset. On top of that, ModReady stops false-flagging harmless content-only mods (texture/asset packs) as "incompatible," and a mod you re-enable after an auto-disable actually loads again.
+1.0.6 - Bug fix update
 
-No load-order or install changes — enable Harmony, UIExtenderEx, ButterLib and MCM (the game auto-sorts them) and Play, through the native launcher or BLSE if you use it. If your settings pages were misbehaving on an earlier build, grab this update.
+Multiple bugs fixed in this update:
 
-Problem? Post it on the Bugs tab with your Modules\Bannerlord.Harmony\runtime.log attached.
+- Settings that wouldn't save — mods that ship their own MCM were getting their settings wiped when you saved a preset. Fixed.
+- Dropdown settings that showed up as a checkbox and forgot your choice — now they render as a real dropdown and keep your selection.
+- Group on/off toggles that had gone missing from the settings menu — the row is back, so you can turn a feature on/off again.
+- Harmless content mods (texture/asset packs) getting falsely flagged as "incompatible" — fixed.
+- A mod you re-enabled after an auto-disable not loading its code — fixed.
+- The built-in self-test leaving ButterLib subsystems switched off after running — fixed.
+- A couple of internal lookups (game version/branch, loaded-module list) that were returning nothing — fixed.
+
+I may not answer every comment, but I do read them — and any bug I see, I'll fix.
 ```
 
 ---
