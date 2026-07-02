@@ -2,6 +2,7 @@
 
 ## v1.0.6 — 2026-07-02
 
+- Campaign saves made with the upstream/official BUTR modules (ButterLib/MCM v5) that froze on load under ModReady now load correctly — ModReady registers the upstream save type-ids.
 - Content-only mods (texture/asset packs with no code) are no longer wrongly reported as "incompatible" or written into the disable list and bug reports.
 - A mod you re-enable in the launcher after an auto-disable now loads its code again, instead of staying silently disabled for up to a week.
 - Rescued mods now register their scene-script types correctly, so their custom props/scenes resolve instead of silently going missing.
