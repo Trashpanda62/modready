@@ -5,11 +5,12 @@ Ships `Bannerlord.Harmony`, `Bannerlord.UIExtenderEx`, `Bannerlord.ButterLib`,
 and `Bannerlord.MBOptionScreen` (MCM) — clean-room
 [ModReady](https://www.nexusmods.com/mountandblade2bannerlord/mods/11274) builds.
 
-## Requires BLSE (not bundled)
+## BLSE — optional (recommended, not bundled)
 
-ModReady does **not** include BLSE. Install **BLSE** (Bannerlord Software
-Extender) from its [Nexus page](https://www.nexusmods.com/mountandblade2bannerlord/mods/1)
-first — it's the launcher you start the game through.
+ModReady loads on its own through the game's **native launcher**, so BLSE is **not**
+required. BLSE is still recommended — it gives better crash reports and the early
+loading some other mods rely on. Get it from its
+[Nexus page](https://www.nexusmods.com/mountandblade2bannerlord/mods/1) if you want it.
 
 Why not bundle it: BLSE ships executables, and re-hosting them inside the download
 gets the file flagged unsafe by Nexus's malware scanner. Keeping BLSE as its own
@@ -52,10 +53,13 @@ truth for the module DLLs; ModReady just vendors and packages them.
 
 ## Install (for users)
 
-1. Install **BLSE** from Nexus.
-2. Extract `ModReady-v<ver>.zip`'s `Modules` folder into your Bannerlord folder
+1. Extract `ModReady-v<ver>.zip`'s `Modules` folder into your Bannerlord folder
    (the one containing `bin` and `Modules`), merging when asked.
-3. Launch through BLSE, enable Harmony / ButterLib / UIExtenderEx / MCM, then Play.
+2. Enable Harmony / UIExtenderEx / ButterLib / MCM in the launcher, then Play —
+   through the native launcher, or BLSE (optional) if you installed it.
+
+The game auto-sorts these by their declared dependencies; the order above is just
+the order they end up in (Harmony → UIExtenderEx → ButterLib → MCM), all above Native.
 
 ## Ship
 

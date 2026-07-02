@@ -80,7 +80,7 @@ INSTALL
        C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord
   2. Extract this zip's "Modules" folder into that folder, MERGING when Windows
      asks (this adds files; it does not overwrite the game).
-  3. Enable Harmony, ButterLib, UIExtenderEx and MCM in the launcher (plus any
+  3. Enable Harmony, UIExtenderEx, ButterLib and MCM in the launcher (plus any
      content mods you add later), then Play -- through BLSE if you installed it,
      or the native launcher.
 
