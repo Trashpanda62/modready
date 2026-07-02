@@ -4,16 +4,16 @@
   ModReady does NOT bundle BLSE. Nexus's malware scanner flags any archive that
   contains executables (BLSE ships three .exe files), so re-hosting BLSE inside
   the download gets the file marked unsafe. Instead ModReady ships ONLY the four
-  BUTR dependency modules (pure managed DLLs, no .exe) and lists BLSE as a
-  required mod -- the same approach BetaDeps ships on Nexus without being flagged.
-  Bonus: BLSE then stays current on its own (a bundled copy would freeze).
+  BUTR dependency modules (pure managed DLLs, no .exe). BLSE is no longer required
+  (the modules load through the native launcher on their own) but is still listed
+  as a recommended mod -- and stays current on its own (a bundled copy would freeze).
 
   Builds dist\ModReady-v<ver>.zip from the vendored installer\payload\, laid out
   so the user drag-extracts it into the Bannerlord ROOT:
 
     Modules\Bannerlord.Harmony\        (+ the other 3 dependency modules)
     licenses\                    <- third-party MIT notices
-    README.txt                   <- install instructions (BLSE required first)
+    README.txt                   <- install instructions (BLSE optional)
 
   Zip entry names use forward slashes so native Linux/Steam Deck extractors
   (unzip, 7z, ark, file-roller) produce a correct nested tree.
@@ -43,7 +43,7 @@ if (-not (Test-Path $payloadModules)) { Fail "payload\Modules not found. Run .\s
 foreach ($m in $deps) {
   if (-not (Test-Path (Join-Path $payloadModules $m))) { Fail "payload\Modules\$m missing -- run sync-payload.ps1." }
 }
-if (Test-Path (Join-Path $payloadModules 'BetaDeps')) { Fail "payload\Modules\BetaDeps must NOT be present -- ModReady is the dependency stack only." }
+if (Test-Path (Join-Path $payloadModules 'ModReady')) { Fail "payload\Modules\ModReady must NOT be present -- ModReady is the dependency stack only." }
 
 # --- assemble a staging tree shaped like the Bannerlord root -----------------
 $Stage = Join-Path $Dist ("_zipstage_v$Version")
@@ -68,26 +68,27 @@ ModReady v$Version  -  manual install
 The four BUTR dependency modules every modern Bannerlord mod needs:
 Harmony, UIExtenderEx, ButterLib, and MCM (Mod Configuration Menu).
 
-REQUIRES BLSE FIRST
-  ModReady does not include BLSE. Install BLSE (Bannerlord Software Extender)
-  from its Nexus page first -- it's the launcher you start the game through:
+BLSE -- OPTIONAL (RECOMMENDED)
+  ModReady loads on its own through the game's native launcher, so BLSE is NOT
+  required. It's still recommended -- it gives you better crash reports and the
+  early loading some other mods rely on. Get it from its Nexus page if you want it:
     https://www.nexusmods.com/mountandblade2bannerlord/mods/1
 
 INSTALL
-  1. Install BLSE (above) if you haven't already.
-  2. Open your Bannerlord install folder -- the one containing the "bin" and
+  1. Open your Bannerlord install folder -- the one containing the "bin" and
      "Modules" folders. Typically:
        C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord
-  3. Extract this zip's "Modules" folder into that folder, MERGING when Windows
+  2. Extract this zip's "Modules" folder into that folder, MERGING when Windows
      asks (this adds files; it does not overwrite the game).
-  4. Launch the game through BLSE, enable Harmony, ButterLib, UIExtenderEx and
-     MCM (plus any content mods you add later), then Play.
+  3. Enable Harmony, ButterLib, UIExtenderEx and MCM in the launcher (plus any
+     content mods you add later), then Play -- through BLSE if you installed it,
+     or the native launcher.
 
 That's it -- you're mod-ready. Add the content mods you want into Modules\.
 
 CREDITS
   The BUTR dependency stack is by BUTR (https://github.com/BUTR). The four
-  dependency modules here are clean-room BetaDeps builds. License notices are in
+  dependency modules here are clean-room ModReady builds. License notices are in
   the licenses\ folder.
 "@
 Set-Content -Path (Join-Path $Stage 'README.txt') -Value $readme -Encoding UTF8

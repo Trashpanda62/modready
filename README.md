@@ -3,7 +3,7 @@
 **The Bannerlord dependency modules every modern mod needs, in one download.**
 Ships `Bannerlord.Harmony`, `Bannerlord.UIExtenderEx`, `Bannerlord.ButterLib`,
 and `Bannerlord.MBOptionScreen` (MCM) — clean-room
-[BetaDeps](https://www.nexusmods.com/mountandblade2bannerlord/mods/11274) builds.
+[ModReady](https://www.nexusmods.com/mountandblade2bannerlord/mods/11274) builds.
 
 ## Requires BLSE (not bundled)
 
@@ -15,8 +15,8 @@ Why not bundle it: BLSE ships executables, and re-hosting them inside the downlo
 gets the file flagged unsafe by Nexus's malware scanner. Keeping BLSE as its own
 mod also means it stays up to date on its own (a bundled copy would freeze).
 
-It also does **not** ship the BetaDeps framework module — this is the dependency
-stack only. (`BetaDeps.Foundation.dll` still ships inside each dependency's `bin\`
+It also does **not** ship the ModReady framework module — this is the dependency
+stack only. (`ModReady.Foundation.dll` still ships inside each dependency's `bin\`
 — it's their shared resolve-hook shim and they can't load without it.)
 
 ## Layout
@@ -26,10 +26,10 @@ installer\
   ModReady.iss          Inno Setup script (deps-only local installer; optional)
   ModReady-banner.png   Nexus banner art
   payload\              Vendored snapshot (git-ignored)
-    Modules\            The 4 dependency module folders (no BLSE, no BetaDeps)
+    Modules\            The 4 dependency module folders (no BLSE, no ModReady)
     LICENSES\           Third-party MIT notices
 scripts\
-  sync-payload.ps1      Refresh payload\ from a built beta-deps repo
+  sync-payload.ps1      Refresh payload\ from a built modready repo
   Build-Zip.ps1         Build the manual-install zip (the Nexus artifact)
   Build-Installer.ps1   Build a local Inno installer (optional)
 dist\                   Output: ModReady-v<ver>.zip (git-ignored)
@@ -47,7 +47,7 @@ cd C:\dev\modready
 .\scripts\Build-Installer.ps1 -Version 1.0.0
 ```
 
-`payload\` and `dist\` are **git-ignored** — the beta-deps repo is the source of
+`payload\` and `dist\` are **git-ignored** — the modready repo is the source of
 truth for the module DLLs; ModReady just vendors and packages them.
 
 ## Install (for users)

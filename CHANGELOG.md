@@ -1,5 +1,24 @@
 # ModReady changelog
 
+## Unreleased — bug-fix pass (audit 2026-07-02)
+
+- Content-only mods (texture/asset packs with no code) are no longer wrongly reported as "incompatible" or written into the disable list and bug reports.
+- A mod you re-enable in the launcher after an auto-disable now loads its code again, instead of staying silently disabled for up to a week.
+- Beta-branch (e1.4.x) agent-tick crash guard is actually applied now — the signature check was looking for the wrong number of parameters, so the flagship CTD shim never installed.
+- Rescued mods now register their scene-script types correctly, so their custom props/scenes resolve instead of silently going missing.
+- Internal helpers other mods rely on now return real data instead of always empty/null (loaded-module list and game-version lookup).
+- Fluent-built dropdown settings now keep your selection across launches (they were reverting to the default every start and never persisting new picks).
+- A group's master on/off toggle now appears as a row in Mod Options again — you can turn a feature back on instead of it vanishing from the UI.
+- Settings for mods that ship their own MCM are no longer overwritten with an empty file when you save a preset or capture a profile.
+- The built-in self-test no longer leaves ButterLib subsystems switched off after it runs.
+- Custom battle/mission music no longer goes silent for a context whose track wasn't generated (e.g. only .wav present) — it falls back to vanilla instead.
+- Settlement (town/tavern) custom music no longer plays on top of the campaign theme; the campaign theme is muted while the settlement track plays.
+
+## v1.0.5 — 2026-06-28
+
+- Silenced the harmless "could not be loaded correctly due to a dependency conflict" pop-up on Game Pass / Microsoft Store at startup. It was a .NET-Core-only quirk in how the native launcher preloads bundled dependency DLLs (it probes them by bare filename and can't find them, but the modules load correctly anyway); the warning never affected the mod. Steam was never affected.
+- Listed each module's bundled DLLs in dependency order and dropped an unused System.ValueTuple.dll from the Harmony Game Pass build (cleanup).
+
 ## v1.0.4 — 2026-06-27
 
 - Mods built against the real BUTR MCM now show and save their settings (were showing a blank panel).

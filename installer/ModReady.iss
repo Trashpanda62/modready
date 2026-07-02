@@ -6,8 +6,8 @@
 ;  Does NOT bundle BLSE. BLSE ships executables, and re-hosting them gets the
 ;  download flagged by Nexus's malware scanner -- so BLSE is a REQUIRED separate
 ;  mod (https://www.nexusmods.com/mountandblade2bannerlord/mods/1), which also
-;  keeps it updatable on its own. The BetaDeps framework module is likewise NOT
-;  shipped -- this is the dependency stack only. BetaDeps.Foundation.dll still
+;  keeps it updatable on its own. The ModReady framework module is likewise NOT
+;  shipped -- this is the dependency stack only. ModReady.Foundation.dll still
 ;  ships inside each dependency module's bin: it is their shared resolve-hook
 ;  shim and they cannot load without it.
 ;
@@ -47,20 +47,20 @@ WizardStyle=modern
 ArchitecturesInstallIn64BitMode=x64compatible
 ; Third-party MIT notices (Harmony/Cecil/MonoMod/Newtonsoft) shown on the license
 ; page and copied into the install.
-LicenseFile=payload\LICENSES\BetaDeps-THIRD-PARTY-LICENSES.txt
+LicenseFile=payload\LICENSES\ModReady-THIRD-PARTY-LICENSES.txt
 SetupLogging=yes
 
 [Files]
 ; The four BUTR dependency module folders (vendored snapshot in payload\Modules).
-; payload\Modules contains ONLY the four deps -- no BetaDeps module folder, no BLSE.
+; payload\Modules contains ONLY the four deps -- no ModReady module folder, no BLSE.
 Source: "payload\Modules\*"; DestDir: "{app}\Modules"; Flags: recursesubdirs createallsubdirs ignoreversion
 ; License notices (third-party MIT for Harmony/Cecil/MonoMod/Newtonsoft).
 ; Installed under the Harmony dependency module (always present); do NOT target a
-; BetaDeps folder -- this installer ships none and must not recreate one.
+; ModReady folder -- this installer ships none and must not recreate one.
 Source: "payload\LICENSES\*"; DestDir: "{app}\Modules\Bannerlord.Harmony\licenses"; Flags: recursesubdirs createallsubdirs ignoreversion
 
 [UninstallRun]
-; Remove the persistent User-scope CREST_SHOW_STUBS env var BetaDeps may set at
+; Remove the persistent User-scope CREST_SHOW_STUBS env var ModReady may set at
 ; runtime (BLSE launcher hide-stubs opt-out). Best-effort.
 Filename: "{sys}\reg.exe"; Parameters: "delete ""HKCU\Environment"" /v CREST_SHOW_STUBS /f"; Flags: runhidden; RunOnceId: "RemoveCrestShowStubsEnv"
 

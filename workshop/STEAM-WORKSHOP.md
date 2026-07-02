@@ -6,7 +6,7 @@ Workshop legal agreement), so the steps below are copy-paste ready.
 ## Structure (decided 2026-06-19)
 
 Bannerlord's Workshop uploader takes **one module folder per item**, and ModReady
-is four modules — so it's four items + a Collection, the same shape as BetaDeps.
+is four modules — so it's four items + a Collection, the same shape as ModReady.
 
 | Workshop item | Module folder |
 |---|---|
@@ -16,11 +16,11 @@ is four modules — so it's four items + a Collection, the same shape as BetaDep
 | ModReady — MCM | `Bannerlord.MBOptionScreen` |
 
 These four module **IDs are identical** to your existing standalone
-`BetaDeps — Harmony/UIExtenderEx/ButterLib/MCM` Workshop items. Two Workshop
+`ModReady — Harmony/UIExtenderEx/ButterLib/MCM` Workshop items. Two Workshop
 items publishing the same module ID = a duplicate-module conflict for anyone
 subscribed to both. **The plan is to make ModReady's the canonical dependency
-items and retire the old BetaDeps ones** (see step 4). Keep the **BetaDeps main
-module** item — only the four BetaDeps *dependency* items get retired.
+items and retire the old ModReady ones** (see step 4). Keep the **ModReady main
+module** item — only the four ModReady *dependency* items get retired.
 
 ## One-time prep
 
@@ -72,22 +72,22 @@ subscribe to the Collection so they get all four. Cross-link the Collection URL
 on the [Nexus page](https://www.nexusmods.com/mountandblade2bannerlord) and put
 your Nexus/GitHub links in the Steam descriptions.
 
-## Step 4 — retire the old BetaDeps dependency items
+## Step 4 — retire the old ModReady dependency items
 
 For each of the four old items below, open its Workshop page → Edit → set
 **Visibility = Hidden** (hiding stops new subscriptions; existing subscribers are
-unaffected). **Leave the BetaDeps main item Public.**
+unaffected). **Leave the ModReady main item Public.**
 
 | Old item | ID |
 |---|---|
-| BetaDeps — Harmony | 3741428196 |
-| BetaDeps — UIExtenderEx | 3741428357 |
-| BetaDeps — ButterLib | 3741428541 |
-| BetaDeps — MCM | 3741428715 |
+| ModReady — Harmony | 3741428196 |
+| ModReady — UIExtenderEx | 3741428357 |
+| ModReady — ButterLib | 3741428541 |
+| ModReady — MCM | 3741428715 |
 
-**Heads-up:** those four items are also in your existing "BetaDeps (Early
+**Heads-up:** those four items are also in your existing "ModReady (Early
 Dependencies)" Collection. After hiding them, edit that Collection to point at
-the four **ModReady** dependency items instead (same DLLs) so the BetaDeps
+the four **ModReady** dependency items instead (same DLLs) so the ModReady
 Collection still resolves for new users. One canonical set of dependency items,
 no duplicate module IDs.
 

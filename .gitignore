@@ -1,8 +1,8 @@
 # Build output
 dist/
 
-# Vendored payload snapshot -- regenerated from beta-deps via scripts\sync-payload.ps1.
-# The bundled module DLLs + BLSE binaries are NOT source; the beta-deps repo is
+# Vendored payload snapshot -- regenerated from modready via scripts\sync-payload.ps1.
+# The bundled module DLLs + BLSE binaries are NOT source; the modready repo is
 # their source of truth. Keep the folder structure but not the binaries.
 installer/payload/
 
@@ -15,5 +15,5 @@ Thumbs.db
 .DS_Store
 .vs/
 
-# nested framework repo (own git history, remote Trashpanda62/Betadeps)
+# nested framework repo (own git history, remote Trashpanda62/modready-framework)
 framework/

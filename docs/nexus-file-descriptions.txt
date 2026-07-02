@@ -7,5 +7,5 @@ ModReady is DEPS-ONLY now: it bundles the four BUTR dependency modules and does
 NOT include BLSE (re-hosting BLSE's .exe gets the file flagged unsafe by Nexus).
 BLSE is a REQUIRED separate mod. Ship the ZIP (no executables) as the Main File.
 
---- ZIP (Main File — manual install) — 250 chars ---
-Bannerlord dependency modules most mods need: Harmony, UIExtenderEx, ButterLib, MCM. Requires BLSE first (from Nexus). Extract the Modules folder into your Bannerlord folder, merge when asked, launch via BLSE. Clean-room BetaDeps builds; credit BUTR.
+--- ZIP (Main File — manual install) — v1.0.5 — 254 chars ---
+Harmony, UIExtenderEx, ButterLib and MCM in one install - the dependency stack most Bannerlord mods need. Steam and Game Pass supported. Extract the Modules folder into your Bannerlord folder, merge, enable, play. Clean-room ModReady builds; credit BUTR.

@@ -5,13 +5,13 @@
   installer\payload\Modules\ (a vendored snapshot). It does NOT bundle BLSE
   (BLSE is a required separate mod). This script validates that payload and
   compiles installer\ModReady.iss with Inno Setup into dist\ModReady-v<ver>.exe.
-  It does NOT depend on the beta-deps repo.
+  It does NOT depend on the modready repo.
 
   NOTE: Nexus flags Inno .exe installers regardless of contents -- the conventional
   Nexus artifact is the manual-install ZIP (scripts\Build-Zip.ps1). This installer
   is for users who want a local installer.
 
-  To refresh the bundled modules/BLSE after a new beta-deps build, run
+  To refresh the bundled modules/BLSE after a new modready build, run
   scripts\sync-payload.ps1 first.
 
   Prerequisite (one-time):
@@ -43,18 +43,18 @@ if (-not (Test-Path $payloadModules)) {
   Fail "payload\Modules not found. Run .\scripts\sync-payload.ps1 to vendor the dependency modules + BLSE."
 }
 foreach ($m in $deps) {
-  $dll = Join-Path $payloadModules "$m\bin\Win64_Shipping_Client\BetaDeps.Foundation.dll"
+  $dll = Join-Path $payloadModules "$m\bin\Win64_Shipping_Client\ModReady.Foundation.dll"
   if (-not (Test-Path (Join-Path $payloadModules $m))) { Fail "payload\Modules\$m is missing -- run sync-payload.ps1." }
-  if (-not (Test-Path $dll)) { Fail "payload\Modules\$m is missing BetaDeps.Foundation.dll (required shim) -- run sync-payload.ps1." }
+  if (-not (Test-Path $dll)) { Fail "payload\Modules\$m is missing ModReady.Foundation.dll (required shim) -- run sync-payload.ps1." }
 }
-# Guard against accidentally vendoring the BetaDeps framework module.
-if (Test-Path (Join-Path $payloadModules 'BetaDeps')) {
-  Fail "payload\Modules\BetaDeps must NOT be present -- ModReady ships the dependency stack only. Re-run sync-payload.ps1 (it excludes BetaDeps)."
+# Guard against accidentally vendoring the ModReady framework module.
+if (Test-Path (Join-Path $payloadModules 'ModReady')) {
+  Fail "payload\Modules\ModReady must NOT be present -- ModReady ships the dependency stack only. Re-run sync-payload.ps1 (it excludes ModReady)."
 }
 # ModReady ships the dependency stack only -- BLSE is NOT bundled (it's a required
 # separate mod). Only the third-party MIT notices for the bundled DLLs are required.
-if (-not (Test-Path (Join-Path $Payload 'LICENSES\BetaDeps-THIRD-PARTY-LICENSES.txt'))) {
-  Fail "payload\LICENSES\BetaDeps-THIRD-PARTY-LICENSES.txt missing (required notice) -- run sync-payload.ps1."
+if (-not (Test-Path (Join-Path $Payload 'LICENSES\ModReady-THIRD-PARTY-LICENSES.txt'))) {
+  Fail "payload\LICENSES\ModReady-THIRD-PARTY-LICENSES.txt missing (required notice) -- run sync-payload.ps1."
 }
 
 # --- 2. find ISCC ------------------------------------------------------------

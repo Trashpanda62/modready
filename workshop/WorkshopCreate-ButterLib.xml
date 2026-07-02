@@ -2,7 +2,7 @@
     <CreateItem/>
     <UpdateItem>
         <ModuleFolder Value="C:\dev\modready\installer\payload\Modules\Bannerlord.ButterLib"/>
-        <ItemDescription Value="Part of ModReady — the Bannerlord dependency pack. ButterLib, the utility library a large portion of the mod ecosystem builds on. Subscribe to the full ModReady collection to get all four dependencies (Harmony, UIExtenderEx, ButterLib, MCM). Requires BLSE. Clean-room BetaDeps build; credit BUTR."/>
+        <ItemDescription Value="Part of ModReady — the Bannerlord dependency pack. ButterLib, the utility library a large portion of the mod ecosystem builds on. Subscribe to the full ModReady collection to get all four dependencies (Harmony, UIExtenderEx, ButterLib, MCM). Requires BLSE. Clean-room ModReady build; credit BUTR."/>
         <Tags>
             <Tag Value="Utility" />
             <Tag Value="Native" />

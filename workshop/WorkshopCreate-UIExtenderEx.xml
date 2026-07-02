@@ -2,7 +2,7 @@
     <CreateItem/>
     <UpdateItem>
         <ModuleFolder Value="C:\dev\modready\installer\payload\Modules\Bannerlord.UIExtenderEx"/>
-        <ItemDescription Value="Part of ModReady — the Bannerlord dependency pack. UIExtenderEx, the UI extension framework mods use to add or modify menus and panels. Subscribe to the full ModReady collection to get all four dependencies (Harmony, UIExtenderEx, ButterLib, MCM). Requires BLSE. Clean-room BetaDeps build; credit BUTR."/>
+        <ItemDescription Value="Part of ModReady — the Bannerlord dependency pack. UIExtenderEx, the UI extension framework mods use to add or modify menus and panels. Subscribe to the full ModReady collection to get all four dependencies (Harmony, UIExtenderEx, ButterLib, MCM). Requires BLSE. Clean-room ModReady build; credit BUTR."/>
         <Tags>
             <Tag Value="Utility" />
             <Tag Value="Native" />

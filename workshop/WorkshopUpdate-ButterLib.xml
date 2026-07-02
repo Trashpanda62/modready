@@ -4,7 +4,7 @@
     </GetItem>
     <UpdateItem>
         <ModuleFolder Value="C:\dev\modready\installer\payload\Modules\Bannerlord.ButterLib"/>
-        <ChangeNotes Value="ModReady v1.0.3&#10;- Fixed the Game Pass / Microsoft Store launch crash that v1.0.2 did not fully fix." />
+        <ChangeNotes Value="ModReady v1.0.5&#10;- Game Pass / Microsoft Store: removed the harmless 'dependency conflict' startup pop-up some players saw. The dependency modules always loaded correctly; this only silences the launcher warning.&#10;- Tidied the bundled dependency DLLs (load order + removed one unused file)." />
         <Image Value="C:\dev\modready\workshop\ModReady-Image.png"/>
         <Visibility Value="Public"/>
         <Tags>

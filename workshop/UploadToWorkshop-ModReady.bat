@@ -40,5 +40,5 @@ echo.
 echo All four create windows have been launched and closed.
 echo Now: note each item's ItemId, paste them into workshop\WorkshopUpdate-*.xml,
 echo make a "ModReady" Collection from the four items, and (see STEAM-WORKSHOP.md)
-echo hide the old standalone "BetaDeps - X" dependency items.
+echo hide the old standalone "ModReady - X" dependency items.
 pause
