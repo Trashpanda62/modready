@@ -2,6 +2,7 @@
 
 ## v1.0.6 — 2026-07-02
 
+- Fixed the main-menu "Continue" save-load loop with mismatched modules (load from the Saved Games list was unaffected)
 - Fixed startup "dependency conflict" crash with mods using the newer UIExtenderEx insert API (AI Influence 5.0.7 etc.)
 - Windows-blocked (mark-of-the-web) mod DLLs now load automatically - no more manual unblocking
 - Fixed saves made with official BUTR modules freezing on load

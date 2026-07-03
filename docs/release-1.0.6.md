@@ -10,6 +10,7 @@ Nexus mod 11274. Bug-fix release after v1.0.5.
 ```bbcode
 [b]v1.0.6[/b]
 [list]
+[*]Fixed the main-menu "Continue" save-load loop with mismatched modules (loading from the Saved Games list was unaffected)
 [*]Fixed startup "dependency conflict" crash with mods using the newer UIExtenderEx insert API (AI Influence 5.0.7 etc.)
 [*]Windows-blocked (mark-of-the-web) mod DLLs now load automatically - no more manual unblocking
 [*]Fixed saves made with official BUTR modules freezing on load
@@ -79,6 +80,7 @@ Compare: https://github.com/Trashpanda62/modready/compare/v1.0.5...v1.0.6
 ```markdown
 ## v1.0.6
 
+- Fixed the main-menu "Continue" save-load loop with mismatched modules (loading from the Saved Games list was unaffected)
 - Fixed startup "dependency conflict" crash with mods using the newer UIExtenderEx insert API (AI Influence 5.0.7 etc.)
 - Windows-blocked (mark-of-the-web) mod DLLs now load automatically - no more manual unblocking
 - Fixed saves made with official BUTR modules freezing on load
