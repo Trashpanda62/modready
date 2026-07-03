@@ -5,6 +5,11 @@ Ships `Bannerlord.Harmony`, `Bannerlord.UIExtenderEx`, `Bannerlord.ButterLib`,
 and `Bannerlord.MBOptionScreen` (MCM) — clean-room
 [ModReady](https://www.nexusmods.com/mountandblade2bannerlord/mods/11274) builds.
 
+**Get it:** [Nexus](https://www.nexusmods.com/mountandblade2bannerlord/mods/11274) ·
+[Steam Workshop](https://steamcommunity.com/profiles/76561198087292666/myworkshopfiles/?appid=261550) ·
+[Releases here](https://github.com/Trashpanda62/modready/releases)
+**Support the work / commission a mod:** [patreon.com/Trashpanda62](https://www.patreon.com/Trashpanda62?utm_source=github)
+
 ## BLSE — optional (recommended, not bundled)
 
 ModReady loads on its own through the game's **native launcher**, so BLSE is **not**
