@@ -23,33 +23,23 @@ stack only. (`ModReady.Foundation.dll` still ships inside each dependency's `bin
 ## Layout
 
 ```
-installer\
-  ModReady.iss          Inno Setup script (deps-only local installer; optional)
-  ModReady-banner.png   Nexus banner art
-  payload\              Vendored snapshot (git-ignored)
-    Modules\            The 4 dependency module folders (no BLSE, no ModReady)
-    LICENSES\           Third-party MIT notices
-scripts\
-  sync-payload.ps1      Refresh payload\ from a built modready repo
-  Build-Zip.ps1         Build the manual-install zip (the Nexus artifact)
-  Build-Installer.ps1   Build a local Inno installer (optional)
-dist\                   Output: ModReady-v<ver>.zip (git-ignored)
+framework\              The source repo (own git) — all module code + build scripts
+workshop\               Steam Workshop update XMLs + upload .bat
+docs\                   Release texts, runbooks
 ```
 
 ## Build it
 
 ```powershell
-cd C:\dev\modready
-# (first time, or after new module builds) refresh the bundled snapshot:
-.\scripts\sync-payload.ps1            # pulls the 4 deps from C:\dev\modready\framework\dist\Modules
-# build the manual-install zip (this is what goes on Nexus):
-.\scripts\Build-Zip.ps1 -Version 1.0.0
-# optional: a local Inno installer (Nexus flags .exe installers, so not for Nexus):
-.\scripts\Build-Installer.ps1 -Version 1.0.0
+cd C:\dev\modready\framework
+# stage dist\Modules\ + the 5-folder bundle zip (release-gated):
+powershell scripts\Build-Phase1.ps1 -Version <X.Y.Z> -SkipDeploy
+# slice the 4 standalone dependency zips from the same staged tree:
+powershell scripts\Package-Optional-Deps.ps1 -Version <X.Y.Z>
 ```
 
-`payload\` and `dist\` are **git-ignored** — the modready repo is the source of
-truth for the module DLLs; ModReady just vendors and packages them.
+Artifacts land in `framework\dist\` (git-ignored). No installer — Nexus flags
+`.exe` uploads, so distribution is zips only.
 
 ## Install (for users)
 
@@ -63,9 +53,10 @@ the order they end up in (Harmony → UIExtenderEx → ButterLib → MCM), all a
 
 ## Ship
 
-Distribute on **Nexus** as the manual-install **zip** (no executables → not
-flagged). List **BLSE** as a required mod. Don't upload the Inno `.exe` to Nexus —
-its scanner flags installer executables regardless of contents.
+Distribute on **Nexus** as the manual-install **zips** (no executables → not
+flagged): the 5-folder bundle + 4 optional dependency zips from `framework\dist\`.
+Full runbook: `framework\docs\SHIP-IT.md` (trigger: "ship it"). BLSE is optional,
+not required, and never bundled.
 
 ## Licensing / credit
 

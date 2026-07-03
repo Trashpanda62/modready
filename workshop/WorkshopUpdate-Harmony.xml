@@ -3,8 +3,8 @@
         <ItemId Value="3747619959"/>
     </GetItem>
     <UpdateItem>
-        <ModuleFolder Value="C:\dev\modready\installer\payload\Modules\Bannerlord.Harmony"/>
-        <ChangeNotes Value="ModReady v1.0.5&#10;- Game Pass / Microsoft Store: removed the harmless 'dependency conflict' startup pop-up some players saw. The dependency modules always loaded correctly; this only silences the launcher warning.&#10;- Tidied the bundled dependency DLLs (load order + removed one unused file)." />
+        <ModuleFolder Value="C:\dev\modready\framework\dist\Modules\Bannerlord.Harmony"/>
+        <ChangeNotes Value="ModReady v1.0.6&#10;- Fixed: mods built against the newer UIExtenderEx prefab-insert API (e.g. AI Influence v5.0.7) failed at startup with a 'dependency conflict' message&#10;- Fixed: freshly downloaded mod files blocked by Windows (mark of the web) -- the game config now allows them automatically from the next launch, no manual unblocking" />
         <Image Value="C:\dev\modready\workshop\ModReady-Image.png"/>
         <Visibility Value="Public"/>
         <Tags>

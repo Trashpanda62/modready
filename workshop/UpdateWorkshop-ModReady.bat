@@ -10,9 +10,9 @@ REM  Double-click from File Explorer (NOT a terminal) so Steam can inject its
 REM  API. Steam MUST be running and logged in.
 REM
 REM  Prereqs:
-REM    1. Build the payload first:  C:\dev\modready\scripts\sync-payload.ps1
+REM    1. Build the release first: framework\scripts\Build-Phase1.ps1 (stages framework\dist\Modules\)
 REM    2. Each workshop\WorkshopUpdate-*.xml already has the correct <ItemId>,
-REM       <ModuleFolder> (-> installer\payload\Modules\...), <ChangeNotes> and
+REM       <ModuleFolder> (-> framework\dist\Modules\...), <ChangeNotes> and
 REM       game-version <Tag>. Bump the <Tag> if the Bannerlord version changed.
 REM
 REM  If a window keeps printing "Status: k_EItemUpdateStatusInvalid 0/0", the

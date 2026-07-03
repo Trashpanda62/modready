@@ -2,6 +2,9 @@
 
 ## v1.0.6 — 2026-07-02
 
+- Fixed the startup "submodule could not be loaded correctly due to a dependency conflict" crash for mods built against UIExtenderEx's newer prefab-insert API (e.g. AI Influence v5.0.7) — the shim now implements the insert-position Index member those mods override.
+- Windows-blocked (mark-of-the-web) mod DLLs no longer fail with the same "dependency conflict" error — ModReady writes loadFromRemoteSources into the game/launcher exe.config (atomic, merge-preserving), effective from the next launch. No manual unblocking.
+- Removed the local Inno installer (Nexus flags .exe uploads); distribution is zips only.
 - Campaign saves made with the upstream/official BUTR modules (ButterLib/MCM v5) that froze on load under ModReady now load correctly — ModReady registers the upstream save type-ids.
 - Content-only mods (texture/asset packs with no code) are no longer wrongly reported as "incompatible" or written into the disable list and bug reports.
 - A mod you re-enable in the launcher after an auto-disable now loads its code again, instead of staying silently disabled for up to a week.
