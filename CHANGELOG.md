@@ -2,19 +2,18 @@
 
 ## v1.0.6 — 2026-07-02
 
-- Fixed the startup "submodule could not be loaded correctly due to a dependency conflict" crash for mods built against UIExtenderEx's newer prefab-insert API (e.g. AI Influence v5.0.7) — the shim now implements the insert-position Index member those mods override.
-- Windows-blocked (mark-of-the-web) mod DLLs no longer fail with the same "dependency conflict" error — ModReady writes loadFromRemoteSources into the game/launcher exe.config (atomic, merge-preserving), effective from the next launch. No manual unblocking.
-- Removed the local Inno installer (Nexus flags .exe uploads); distribution is zips only.
-- Campaign saves made with the upstream/official BUTR modules (ButterLib/MCM v5) that froze on load under ModReady now load correctly — ModReady registers the upstream save type-ids.
-- Content-only mods (texture/asset packs with no code) are no longer wrongly reported as "incompatible" or written into the disable list and bug reports.
-- A mod you re-enable in the launcher after an auto-disable now loads its code again, instead of staying silently disabled for up to a week.
-- Rescued mods now register their scene-script types correctly, so their custom props/scenes resolve instead of silently going missing.
-- Dropdown settings now render as a dropdown (not a checkbox) and keep your selection across launches — this affected both fluent-built settings and older MCM-v1 dropdowns.
-- A group's master on/off toggle now appears as a row in Mod Options again — you can turn a feature back on instead of it vanishing from the UI.
-- Settings for mods that ship their own MCM are no longer overwritten with an empty file when you save a preset or capture a profile.
-- The built-in self-test no longer leaves ButterLib subsystems switched off after it runs.
-- Internal helpers other mods rely on now return real data instead of always empty/null (loaded-module list, and correct game version + branch detection).
-- Beta-branch agent-tick crash guard is applied correctly again (the signature check counted the wrong number of parameters); the public branch is correctly unaffected.
+- Fixed startup "dependency conflict" crash with mods using the newer UIExtenderEx insert API (AI Influence 5.0.7 etc.)
+- Windows-blocked (mark-of-the-web) mod DLLs now load automatically - no more manual unblocking
+- Fixed saves made with official BUTR modules freezing on load
+- Fixed dropdown settings showing as checkboxes and losing your selection
+- Fixed group on/off toggles missing from Mod Options
+- Fixed mods with their own MCM getting settings wiped on preset save
+- Fixed content-only mods falsely flagged as incompatible
+- Fixed re-enabled mods staying silently disabled
+- Fixed self-test leaving ButterLib subsystems off
+- Fixed scene-script registration for rescued mods
+- Fixed game version/branch and loaded-module lookups returning nothing
+- Fixed beta-branch tick crash guard not applying
 
 ## v1.0.5 — 2026-06-28
 

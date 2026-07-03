@@ -8,22 +8,20 @@ Nexus mod 11274. Bug-fix release after v1.0.5.
 ## 1. Nexus changelog (BBCode — paste into the mod's Changes tab)
 
 ```bbcode
-[b]v1.0.6 — startup "dependency conflict" crashes fixed, settings behave again[/b]
-
-[b]Fixed[/b]
+[b]v1.0.6[/b]
 [list]
-[*][b]Startup crash with mods using UIExtenderEx's newer prefab-insert API[/b] (e.g. AI Influence v5.0.7) — the game showed "submodule could not be loaded correctly due to a dependency conflict" and quit. The missing API (insert-position Index) is now implemented.
-[*][b]No more manual DLL unblocking[/b] — mod files downloaded with a browser and blocked by Windows (mark of the web) caused the same "dependency conflict" error. ModReady now writes the game's config so blocked DLLs load automatically (takes effect from the next launch after installing v1.0.6).
-[*]Campaign saves made with the upstream/official BUTR modules (ButterLib/MCM v5) that froze on load under ModReady now load correctly — ModReady registers the upstream save type-ids.
-[*]Content-only mods (texture/asset packs with no code) are no longer wrongly reported as "incompatible" or written into the disable list and bug reports.
-[*]A mod you re-enable after an auto-disable now loads its code again, instead of staying silently disabled for up to a week.
-[*][b]Dropdown settings[/b] now render as a dropdown (not a checkbox) and keep your selection across launches — both fluent-built settings and older MCM-v1 dropdowns.
-[*]A group's [b]master on/off toggle[/b] shows as a row in Mod Options again — you can turn a feature back on instead of it vanishing from the UI.
-[*]Mods that ship their own MCM no longer get their settings overwritten with an empty file when you save a preset or capture a profile.
-[*]The built-in self-test no longer leaves ButterLib subsystems switched off after it runs.
-[*]Rescued mods register their scene-script types correctly, so their custom props/scenes resolve instead of silently going missing.
-[*]Internal helpers other mods rely on return real data again (loaded-module list, and correct game version + branch detection).
-[*]Beta-branch agent-tick crash guard is applied correctly again; the public branch is correctly unaffected.
+[*]Fixed startup "dependency conflict" crash with mods using the newer UIExtenderEx insert API (AI Influence 5.0.7 etc.)
+[*]Windows-blocked (mark-of-the-web) mod DLLs now load automatically - no more manual unblocking
+[*]Fixed saves made with official BUTR modules freezing on load
+[*]Fixed dropdown settings showing as checkboxes and losing your selection
+[*]Fixed group on/off toggles missing from Mod Options
+[*]Fixed mods with their own MCM getting settings wiped on preset save
+[*]Fixed content-only mods falsely flagged as incompatible
+[*]Fixed re-enabled mods staying silently disabled
+[*]Fixed self-test leaving ButterLib subsystems off
+[*]Fixed scene-script registration for rescued mods
+[*]Fixed game version/branch and loaded-module lookups returning nothing
+[*]Fixed beta-branch tick crash guard not applying
 [/list]
 ```
 
@@ -52,25 +50,23 @@ I may not answer every comment, but I do read them — and any bug I see, I'll f
 
 ---
 
-## 3. Steam change note (plain text, ≤150 words)
+## 3. Steam change note (plain text)
 
 ```
-v1.0.6 — startup dependency-conflict crashes fixed + MCM settings fixes.
+v1.0.6
 
-Fixed:
-- Mods using UIExtenderEx's newer prefab-insert API (e.g. AI Influence v5.0.7) no longer crash at startup with a "dependency conflict" message.
-- Windows-blocked (mark-of-the-web) mod DLLs load automatically from the next launch — no manual unblocking.
-- Campaign saves made with the official BUTR modules that froze on load under ModReady now load correctly.
-- Dropdown settings render as dropdowns (not checkboxes) and keep your selection across launches.
-- A group's master on/off toggle shows as a row again.
-- Mods with their own MCM no longer get their settings wiped on preset/profile save.
-- Content-only mods (texture/asset packs) are no longer false-flagged "incompatible."
-- A mod you re-enable after an auto-disable loads its code again.
-- The self-test no longer leaves ButterLib subsystems off.
-- Rescued mods register their scene-script types correctly.
-- Internal version/branch and loaded-module lookups return real data again.
-
-No install or load-order changes. Enable Harmony, UIExtenderEx, ButterLib and MCM and Play.
+- Fixed startup "dependency conflict" crash with mods using the newer UIExtenderEx insert API (AI Influence 5.0.7 etc.)
+- Windows-blocked (mark-of-the-web) mod DLLs now load automatically - no more manual unblocking
+- Fixed saves made with official BUTR modules freezing on load
+- Fixed dropdown settings showing as checkboxes and losing your selection
+- Fixed group on/off toggles missing from Mod Options
+- Fixed mods with their own MCM getting settings wiped on preset save
+- Fixed content-only mods falsely flagged as incompatible
+- Fixed re-enabled mods staying silently disabled
+- Fixed self-test leaving ButterLib subsystems off
+- Fixed scene-script registration for rescued mods
+- Fixed game version/branch and loaded-module lookups returning nothing
+- Fixed beta-branch tick crash guard not applying
 ```
 
 ---
@@ -81,23 +77,22 @@ Tag: `v1.0.6`  ·  Title: `v1.0.6 — dependency-conflict startup crashes fixed`
 Compare: https://github.com/Trashpanda62/modready/compare/v1.0.5...v1.0.6
 
 ```markdown
-## v1.0.6 — startup "dependency conflict" crashes fixed, settings behave again
+## v1.0.6
 
-**Fixed**
-- Startup crash with mods using UIExtenderEx's newer prefab-insert API (e.g. AI Influence v5.0.7): the shim now implements the insert-position `Index` member those mods override, so their types load instead of dying with "dependency conflict".
-- Web-marked (mark-of-the-web) mod DLLs: ModReady writes `<loadFromRemoteSources enabled="true"/>` into the game/launcher exe.config (atomic, merge-preserving), so blocked DLLs load from the next launch — no manual unblocking.
-- Campaign saves made with the upstream/official BUTR modules (ButterLib/MCM v5) that froze on load under ModReady now load correctly — ModReady registers the upstream save type-ids.
-- Content-only mods (texture/asset packs with no code) are no longer wrongly reported as "incompatible" or written into the disable list and bug reports.
-- A mod you re-enable after an auto-disable now loads its code again, instead of staying silently disabled for up to a week.
-- Dropdown settings now render as a dropdown (not a checkbox) and keep your selection across launches — both fluent-built settings and older MCM-v1 dropdowns.
-- A group's master on/off toggle shows as a row in Mod Options again.
-- Mods that ship their own MCM no longer get their settings overwritten with an empty file on preset/profile save.
-- The built-in self-test no longer leaves ButterLib subsystems switched off after it runs.
-- Rescued mods register their scene-script types correctly, so their custom props/scenes resolve.
-- Internal helpers other mods rely on return real data again (loaded-module list, correct game version + branch detection).
-- Beta-branch agent-tick crash guard is applied correctly again; the public branch is correctly unaffected.
+- Fixed startup "dependency conflict" crash with mods using the newer UIExtenderEx insert API (AI Influence 5.0.7 etc.)
+- Windows-blocked (mark-of-the-web) mod DLLs now load automatically - no more manual unblocking
+- Fixed saves made with official BUTR modules freezing on load
+- Fixed dropdown settings showing as checkboxes and losing your selection
+- Fixed group on/off toggles missing from Mod Options
+- Fixed mods with their own MCM getting settings wiped on preset save
+- Fixed content-only mods falsely flagged as incompatible
+- Fixed re-enabled mods staying silently disabled
+- Fixed self-test leaving ButterLib subsystems off
+- Fixed scene-script registration for rescued mods
+- Fixed game version/branch and loaded-module lookups returning nothing
+- Fixed beta-branch tick crash guard not applying
 
-**Install:** extract the `Modules` folder into your Bannerlord install (the one with `bin` and `Modules`), enable Harmony / UIExtenderEx / ButterLib / MCM, then Play — native launcher or BLSE (optional). Deps-only; no BLSE bundled.
+**Install:** extract the `Modules` folder into your Bannerlord install, enable Harmony / UIExtenderEx / ButterLib / MCM, Play.
 ```
 
 ---
