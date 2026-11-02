@@ -1,15 +1,5 @@
 # ModReady changelog
 
-## v2.0.0 — 2026-11-02
-
-Compatible with Bannerlord 1.4.0 – 1.4.8 (Steam). Requires BUTR's Harmony.
-
-- ModReady no longer ships Harmony, UIExtenderEx, ButterLib or MCM — use BUTR's originals, which are updated for 1.4.8
-- Fixed launcher and save crashes from ModReady's old dependency modules clashing with BUTR's UIExtenderEx 3 / MCM 5.13 / ButterLib 2.12
-- ModReady is now one optional module that runs on top of BUTR's Harmony
-- Roster repair, tooltip-text and map-bar guards moved into the ModReady module
-- Game Pass: not supported in v2.0.0 (BUTR's stack covers Game Pass on its own)
-
 ## v1.1.0 — 2026-07-09
 
 Compatible with Bannerlord 1.4.0 – 1.4.7. Steam and Game Pass.
