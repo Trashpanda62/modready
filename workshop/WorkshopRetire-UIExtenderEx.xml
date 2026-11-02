@@ -1,0 +1,26 @@
+<Tasks>
+    <GetItem>
+        <ItemId Value="3747620095"/>
+    </GetItem>
+    <UpdateItem>
+        <ModuleFolder Value="C:\dev\modready\framework\dist\v2\Retired\ModReadyRetired.UIExtenderEx"/>
+        <ItemDescription Value="[b]RETIRED — please unsubscribe.[/b]&#10;&#10;This item used to hold ModReady's own build of UIExtenderEx. ModReady no longer ships its own copies of the BUTR dependency modules: BUTR's originals are updated for Bannerlord v1.4.8, and running two sets with the same module IDs was causing crashes.&#10;&#10;[b]What to do:[/b] unsubscribe from this item and subscribe to BUTR's original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2859222409]UIExtenderEx[/url]. Full BUTR stack: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2859188632]Harmony[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2859222409]UIExtenderEx[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2859232415]ButterLib[/url] · [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2859238197]Mod Configuration Menu v5[/url].&#10;&#10;ModReady itself lives on as an optional add-on (save-load and crash guards) that runs on top of BUTR's stack: [url=https://www.nexusmods.com/mountandblade2bannerlord/mods/11274]Nexus[/url] · [url=https://github.com/Trashpanda62/modready-framework]source[/url]."/>
+        <ChangeNotes Value="Retired. ModReady no longer ships its own Harmony/UIExtenderEx/ButterLib/MCM. Unsubscribe and use BUTR's originals (linked in the description), which support v1.4.8." />
+        <Image Value="C:\dev\modready\workshop\ModReady-UIExtenderEx-thumb.png"/>
+        <Visibility Value="Public"/>
+        <Tags>
+            <Tag Value="Utility" />
+            <Tag Value="Native" />
+            <Tag Value="Singleplayer" />
+            <Tag Value="v1.4.0" />
+            <Tag Value="v1.4.1" />
+            <Tag Value="v1.4.2" />
+            <Tag Value="v1.4.3" />
+            <Tag Value="v1.4.4" />
+            <Tag Value="v1.4.5" />
+            <Tag Value="v1.4.6" />
+            <Tag Value="v1.4.7" />
+            <Tag Value="v1.4.8" />
+        </Tags>
+    </UpdateItem>
+</Tasks>

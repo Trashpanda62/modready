@@ -1,0 +1,23 @@
+<Tasks>
+    <CreateItem/>
+    <UpdateItem>
+        <ModuleFolder Value="C:\dev\modready\framework\dist\v2\Modules\ModReady"/>
+        <ItemDescription Value="[b]ModReady[/b] — save-load and crash guards for Bannerlord, as an optional add-on that runs on top of BUTR's dependency stack.&#10;&#10;[b]What it does[/b]&#10;- Removes corrupt leftover troops (e.g. orphaned retinues) from party rosters on load, so the map and party screens stop freezing&#10;- Guards the tooltip text lookup and map-bar refresh so a broken mod can't hang the campaign map on load&#10;- Fixes the main-menu Continue save-load loop with mismatched modules&#10;- Loads mods that ship several per-game-version DLLs without corrupting the save system&#10;- Catches mod patches built against older game versions and names the culprit mod in runtime.log&#10;&#10;[b]Requires[/b] BUTR's [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2859188632]Harmony[/url]. Load order: Harmony, then ModReady, then your other mods.&#10;&#10;ModReady no longer ships its own Harmony/UIExtenderEx/ButterLib/MCM — use BUTR's originals. If you were subscribed to the old ModReady dependency items, unsubscribe from them.&#10;&#10;[url=https://www.nexusmods.com/mountandblade2bannerlord/mods/11274]Nexus[/url] · [url=https://github.com/Trashpanda62/modready-framework]Source (MIT)[/url] · [url=https://www.patreon.com/Trashpanda62?utm_source=steam]Patreon[/url]"/>
+        <Image Value="C:\dev\modready\workshop\ModReady-Image.png"/>
+        <Visibility Value="Public"/>
+        <Tags>
+            <Tag Value="Utility" />
+            <Tag Value="Native" />
+            <Tag Value="Singleplayer" />
+            <Tag Value="v1.4.0" />
+            <Tag Value="v1.4.1" />
+            <Tag Value="v1.4.2" />
+            <Tag Value="v1.4.3" />
+            <Tag Value="v1.4.4" />
+            <Tag Value="v1.4.5" />
+            <Tag Value="v1.4.6" />
+            <Tag Value="v1.4.7" />
+            <Tag Value="v1.4.8" />
+        </Tags>
+    </UpdateItem>
+</Tasks>
