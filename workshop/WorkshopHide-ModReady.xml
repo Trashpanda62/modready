@@ -1,0 +1,10 @@
+<Tasks>
+    <GetItem>
+        <ItemId Value="3832648631"/>
+    </GetItem>
+    <UpdateItem>
+        <ModuleFolder Value="C:\dev\modready\framework\dist\v2\Modules\ModReady"/>
+        <ChangeNotes Value="Hidden." />
+        <Visibility Value="Private"/>
+    </UpdateItem>
+</Tasks>

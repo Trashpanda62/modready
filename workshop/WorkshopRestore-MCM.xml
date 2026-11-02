@@ -1,0 +1,19 @@
+<Tasks>
+    <GetItem>
+        <ItemId Value="3747620191"/>
+    </GetItem>
+    <UpdateItem>
+        <ModuleFolder Value="C:\dev\modready\dist\v1.1.0-restore\Modules\Bannerlord.MBOptionScreen"/>
+        <ItemDescription Value="Part of [b]ModReady[/b] — the Bannerlord dependency pack. MCM (Mod Configuration Menu v5), the in-game settings screen mods register their options with. Built for Bannerlord v1.4.6. Subscribe to all four dependencies (Harmony, UIExtenderEx, ButterLib, MCM): [url=https://steamcommunity.com/profiles/76561198087292666/myworkshopfiles/?appid=261550]full ModReady set here[/url]. Loads through the native launcher — BLSE not required (optional, still supported). Clean-room ModReady build; credit [url=https://github.com/BUTR]BUTR[/url] for the original frameworks.&#10;&#10;[url=https://www.nexusmods.com/mountandblade2bannerlord/mods/11274]Nexus — manual install, full changelog + support[/url] · [url=https://github.com/Trashpanda62/modready]GitHub — source + release zips[/url] · [url=https://www.patreon.com/Trashpanda62?utm_source=steam]Support development on Patreon[/url]&#10;&#10;If ModReady saved you a red-screen headache, a thumbs-up helps other players find it."/>
+        <ChangeNotes Value="Restored v1.1.0. Reverts the retirement notice uploaded earlier today by mistake." />
+        <Image Value="C:\dev\modready\workshop\ModReady-MCM-thumb.png"/>
+        <Visibility Value="Public"/>
+        <Tags>
+            <Tag Value="Utility" />
+            <Tag Value="Native" />
+            <Tag Value="Singleplayer" />
+            <Tag Value="Multiplayer" />
+            <Tag Value="v1.4.6" />
+        </Tags>
+    </UpdateItem>
+</Tasks>
