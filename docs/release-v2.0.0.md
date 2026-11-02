@@ -93,7 +93,7 @@ Compatible with Bannerlord 1.4.0 – 1.4.8 (Steam). Requires BUTR's Harmony.
 
 - Old items 3747619959 / 3747620095 / 3747620149 / 3747620191 → retired notice:
   `workshop\WorkshopRetire-{Harmony,UIExtenderEx,ButterLib,MCM}.xml`
-- New ModReady item: `workshop\WorkshopCreate-ModReady.xml` (mints a new item id; after
+- New ModReady item: **3832648631** (https://steamcommunity.com/sharedfiles/filedetails/?id=3832648631), created 2026-11-02; future updates use `workshopWorkshopUpdate-ModReady.xml`
   it uploads, add BUTR Harmony 2859188632 as a Required Item on the item page)
 - Run all five: `workshop\Ship-V2-Workshop.bat`
 
