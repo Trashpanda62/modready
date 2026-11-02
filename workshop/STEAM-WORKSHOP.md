@@ -38,9 +38,11 @@ module** item — only the four ModReady *dependency* items get retired.
 ## Tags (all four items)
 
 Type **Utility** · Setting **Native** · Game Mode **Singleplayer**
-(MCM also adds **Multiplayer**) · Compatible Version **v1.4.6**.
-Confirm the version-tag string against the Workshop "Browse by Tag" list when you
-upload — if it shows as `e1.4.6`, change the `<Tag Value="v1.4.6" />` lines.
+(MCM also adds **Multiplayer**) · Compatible Version **v1.4.0 through v1.4.6**
+(one `<Tag>` per version — ModReady runs on the whole range, so every version
+from 1.4.0 up is listed).
+Confirm the version-tag strings against the Workshop "Browse by Tag" list when you
+upload — if they show as `e1.4.x`, change the `<Tag Value="v1.4.x" />` lines to match.
 
 ## Step 1 — create the four items
 

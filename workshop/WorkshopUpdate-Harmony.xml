@@ -4,13 +4,20 @@
     </GetItem>
     <UpdateItem>
         <ModuleFolder Value="C:\dev\modready\framework\dist\Modules\Bannerlord.Harmony"/>
-        <ChangeNotes Value="ModReady v1.0.6&#10;- Fixed: mods built against the newer UIExtenderEx prefab-insert API (e.g. AI Influence v5.0.7) failed at startup with a 'dependency conflict' message&#10;- Fixed: freshly downloaded mod files blocked by Windows (mark of the web) -- the game config now allows them automatically from the next launch, no manual unblocking" />
-        <Image Value="C:\dev\modready\workshop\ModReady-Image.png"/>
+        <ItemDescription Value="Part of [b]ModReady[/b] — the Bannerlord dependency pack. Harmony 2 runtime patcher, required by almost every mod that patches game methods. Built for Bannerlord v1.4.6. Subscribe to all four dependencies (Harmony, UIExtenderEx, ButterLib, MCM): [url=https://steamcommunity.com/profiles/76561198087292666/myworkshopfiles/?appid=261550]full ModReady set here[/url]. Loads through the native launcher — BLSE not required (optional, still supported). Clean-room ModReady build; credit [url=https://github.com/BUTR]BUTR[/url] for the original frameworks.&#10;&#10;[url=https://www.nexusmods.com/mountandblade2bannerlord/mods/11274]Nexus — manual install, full changelog + support[/url] · [url=https://github.com/Trashpanda62/modready]GitHub — source + release zips[/url] · [url=https://www.patreon.com/Trashpanda62?utm_source=steam]Support development on Patreon[/url]&#10;&#10;If ModReady saved you a red-screen headache, a thumbs-up helps other players find it."/>
+        <ChangeNotes Value="Listing refresh (no code changes)&#10;- Compatible-version tags now cover the full v1.4.0–v1.4.6 range, not just v1.4.6&#10;- Description updated: BLSE is optional since v1.0.6, not required&#10;- Added links: full ModReady set, Nexus, GitHub, Patreon&#10;- New module-specific Workshop thumbnail" />
+        <Image Value="C:\dev\modready\workshop\ModReady-Harmony-thumb.png"/>
         <Visibility Value="Public"/>
         <Tags>
             <Tag Value="Utility" />
             <Tag Value="Native" />
             <Tag Value="Singleplayer" />
+            <Tag Value="v1.4.0" />
+            <Tag Value="v1.4.1" />
+            <Tag Value="v1.4.2" />
+            <Tag Value="v1.4.3" />
+            <Tag Value="v1.4.4" />
+            <Tag Value="v1.4.5" />
             <Tag Value="v1.4.6" />
         </Tags>
     </UpdateItem>

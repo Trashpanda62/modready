@@ -2,15 +2,21 @@
     <CreateItem/>
     <UpdateItem>
         <ModuleFolder Value="C:\dev\modready\installer\payload\Modules\Bannerlord.MBOptionScreen"/>
-        <ItemDescription Value="Part of ModReady — the Bannerlord dependency pack. MCM (Mod Configuration Menu v5), the in-game settings screen mods register their options with. Subscribe to the full ModReady collection to get all four dependencies (Harmony, UIExtenderEx, ButterLib, MCM). Requires BLSE. Clean-room ModReady build; credit BUTR."/>
+        <ItemDescription Value="Part of ModReady — the Bannerlord dependency pack. MCM (Mod Configuration Menu v5), the in-game settings screen mods register their options with. Subscribe to the full ModReady collection to get all four dependencies (Harmony, UIExtenderEx, ButterLib, MCM). Loads through the native launcher — BLSE optional. Clean-room ModReady build; credit BUTR."/>
         <Tags>
             <Tag Value="Utility" />
             <Tag Value="Native" />
             <Tag Value="Singleplayer" />
             <Tag Value="Multiplayer" />
+            <Tag Value="v1.4.0" />
+            <Tag Value="v1.4.1" />
+            <Tag Value="v1.4.2" />
+            <Tag Value="v1.4.3" />
+            <Tag Value="v1.4.4" />
+            <Tag Value="v1.4.5" />
             <Tag Value="v1.4.6" />
         </Tags>
-        <Image Value="C:\dev\modready\workshop\ModReady-Image.png"/>
+        <Image Value="C:\dev\modready\workshop\ModReady-MCM-thumb.png"/>
         <Visibility Value="Public"/>
     </UpdateItem>
 </Tasks>
