@@ -1,5 +1,12 @@
 # ModReady changelog
 
+## v1.2.0 — 2026-11-02
+
+Updated for Bannerlord 1.4.8 mods. Steam Workshop.
+
+- UIExtenderEx 3.0, MCM 5.13 and ButterLib 2.12 compatible, so mods built against the new versions load instead of crashing
+- MCM: settings a mod declares in its SubModule.xml now show in Mod Options
+
 ## v1.1.0 — 2026-07-09
 
 Compatible with Bannerlord 1.4.0 – 1.4.7. Steam and Game Pass.

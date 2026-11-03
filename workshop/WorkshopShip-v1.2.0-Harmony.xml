@@ -1,0 +1,24 @@
+<Tasks>
+    <GetItem>
+        <ItemId Value="3747619959"/>
+    </GetItem>
+    <UpdateItem>
+        <ModuleFolder Value="C:\dev\modready\dist\v1.2.0-ship\Modules\Bannerlord.Harmony"/>
+        <ItemDescription Value="Part of [b]ModReady[/b] — the Bannerlord dependency pack. Harmony 2 runtime patcher, required by almost every mod that patches game methods. Built for Bannerlord v1.4.6. Subscribe to all four dependencies (Harmony, UIExtenderEx, ButterLib, MCM): [url=https://steamcommunity.com/profiles/76561198087292666/myworkshopfiles/?appid=261550]full ModReady set here[/url]. Loads through the native launcher — BLSE not required (optional, still supported). Clean-room ModReady build; credit [url=https://github.com/BUTR]BUTR[/url] for the original frameworks.&#10;&#10;[url=https://www.nexusmods.com/mountandblade2bannerlord/mods/11274]Nexus — manual install, full changelog + support[/url] · [url=https://github.com/Trashpanda62/modready]GitHub — source + release zips[/url] · [url=https://www.patreon.com/Trashpanda62?utm_source=steam]Support development on Patreon[/url]&#10;&#10;If ModReady saved you a red-screen headache, a thumbs-up helps other players find it."/>
+        <ChangeNotes Value="ModReady v1.2.0&#10;- Updated for Bannerlord 1.4.8 mods: UIExtenderEx 3.0, MCM 5.13 and ButterLib 2.12 compatible, so mods built against the new versions load&#10;- MCM: settings a mod declares in its SubModule.xml now show in Mod Options" />
+        <Image Value="C:\dev\modready\workshop\ModReady-Harmony-thumb.png"/>
+        <Visibility Value="Public"/>
+        <Tags>
+            <Tag Value="Utility" />
+            <Tag Value="Native" />
+            <Tag Value="Singleplayer" />
+            <Tag Value="v1.4.0" />
+            <Tag Value="v1.4.1" />
+            <Tag Value="v1.4.2" />
+            <Tag Value="v1.4.3" />
+            <Tag Value="v1.4.4" />
+            <Tag Value="v1.4.5" />
+            <Tag Value="v1.4.6" />
+        </Tags>
+    </UpdateItem>
+</Tasks>
